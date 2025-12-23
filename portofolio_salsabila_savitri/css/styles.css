@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #0f172a;
+  --secondary: #1e40af;
+  --accent: #3b82f6;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --light: #f8fafc;
+  --dark: #0f172a;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(to right, #e0f2fe, #f0f9ff);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HOME ================= */
+#home {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  text-align: center;
+  padding: 7rem 2rem;
+  border-radius: 0 0 50px 50px;
+}
+
+#home h1 {
+  font-size: 2.8rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ================= CARD ================= */
+.headquarters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= PROJECT IMAGE ================= */
+.card img.project-photo {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+/* ================= TECHNICAL SKILLS ================= */
+#technical-skills .card {
+  text-align: left;
+}
+
+#technical-skills p {
+  margin-top: 1.2rem;
+}
+
+#technical-skills strong {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+#technical-skills .logo-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+#technical-skills .logo-row img {
+  width: 85px;
+}
+
+/* ================= FORM (MESSAGE ME – ASLI, TIDAK DIUBAH) ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1.2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form button {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: var(--font-main);
+}
+
+form button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: var(--secondary);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+  border-radius: 40px 40px 0 0;
+}
+
+/* ================= ANIMATION ================= */
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: var(--primary);
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+
+  .card img.project-photo {
+    height: 160px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================================== */
+/* ============ TAMBAHAN SAJA: MODAL POPUP ============= */
+/* ===================================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 12% auto;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.close:hover {
+  color: black;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
