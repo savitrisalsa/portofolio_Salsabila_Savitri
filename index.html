@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+
+    <!-- CSS External Link -->
+    <link rel="stylesheet" href="css\styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images\foto_salsabila savitri.png" alt="Logo" class="logo-img" />
+                <span>Portofolio</span>
+            </div>
+            <nav>
+                <ul id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profile">My Profile</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#message me">Message Me</a></li>
+                    <li><a href="#contact me">Contact Me</a></li>
+                </ul>
+                <button id="menuToggle">☰</button>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home">
+        <h1>Hai <span id="userName"></span>, Welcome to My Portofolio</h1>
+        <p>Your one-step place to explore my projects</p>
+    </section>
+
+    <section id="profile">
+        <h2>My Profile</h2>
+        <p>
+            Haii!!! Nama saya Salsabila Savitri. Mahasiswa yang sedang berkuliah di Universitas Islam Negeri Walisongo Semarang. 
+            Saya mahasiswa semester 5 jurusan Teknologi Informasi. Fokus saya saat ini yaitu kuliah, dan mengembangkan diri di bidang teknologi khususnya dalam pemrograman dan design UI & UX. Saya juga pernah aktif dalam organisasi yaitu Himpunan Mahasiswa Jurusan (HMJ) Teknologi Informasipada divisi Kewirausahaan periode 2025 pada bulan Februari s/d Desember.
+        </p>
+    </section>
+
+    <section id="technical-skills">
+        <h2>Technical Skills</h2>
+
+        <div class="headquarters">
+            <div class="card fade-in-up">
+
+                <p class="skill-title"><strong>Programming:</strong> HTML, CSS, JavaScript, Python</p>
+
+                <p class="skill-title"><strong>Database:</strong> MySQL, phpMyAdmin</p>
+
+                <p class="skill-title"><strong>Tools & Development Environment:</strong> 
+                    Visual Studio Code, Google Colab, XAMPP, Android Studio
+                </p>
+
+                <p class="skill-title"><strong>Software:</strong> Microsoft Word, PowerPoint</p>
+
+                <p class="skill-title"><strong>Desain:</strong> Photoshop, Figma, Canva</p>
+
+                <!-- ICON DISATUKAN DI BAWAH -->
+                <div class="logo-row skill-icons">
+                    <img src="images/logo_python.png" alt="Python">
+                    <img src="images/logo_html.png" alt="HTML">
+                    <img src="images/logo_css.png" alt="CSS">
+                    <img src="images/logo_figma.png" alt="Figma">
+                    <img src="images/logo_photoshop.png" alt="Photoshop">
+                    <img src="images/logo_canva.png" alt="Canva">
+                    <img src="images/logo_vs_code.png" alt="VS Code">
+                    <img src="images/logo_android studio.png" alt="Android Studio">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portofolio">
+        <h2>Projects</h2>
+        <p>DIbawah ini adalah beberapa project dan tugas kuliah yang pernah saya kerjakan<p>
+        <div class="headquarters">
+            <div class="card fade-in-up">
+                <img src="images\project_web.jpg" alt="Website Warjok" class="project-photo" >
+                <h3>Website Warung Pojok</h3>
+                <p>Website ini dibuat menggunakan VS Code dengan PHP Native, MySQL, CSS framework yaitu Boostrap</p>
+            </div>
+        </div>
+        <div class="headquarters">
+            <div class="card fade-in-up">
+                <img src="images\project_javajpg.jpg" alt="Aplikasi Apotek" class="project-photo" >
+                <h3>Program Aplikasi Apotek</h3>
+                <p>Program aplikasi ini dibuat menggunakan bahasa pemrograman Java di Apache Netbeans</p>
+            </div>
+        </div>
+        <div class="headquarters">
+            <div class="card fade-in-up">
+                <img src="images\project_figma.jpg" alt="Aplikasi Act-Saryva" class="project-photo" >
+                <h3>Perancangan Aplikasi Act-Saryva</h3>
+                <p>Aplikasi ini di design menggunakan Figma</p>
+            </div>
+        </div>
+        <div class="headquarters">
+            <div class="card fade-in-up">
+                <img src="images\aplikasi_InstaPlan.jpg" alt="Aplikasi InstaPlan" class="project-photo" >
+                <h3>Perancangan Aplikasi InstaPlan</h3>
+                <p>Aplikasi ini dibuat menggunakan Andoid Studio (Java)</p>
+            </div>
+        </div>
+    </section>
+
+    </section>
+    <section id="message-me">
+        <h2>Message Me</h2>
+
+        <form id="messageForm">
+            <input type="text" id="name" placeholder="Nama" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="tel" id="phone" placeholder="Nomor Telepon" required />
+            <textarea id="messageText" placeholder="Tulis pesan Anda di sini..." rows="4" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+
+        <!-- Modal Pop-up -->
+        <div id="popupModal" class="modal">
+            <div class="modal-content slide-up glow">
+                <span class="close">&times;</span>
+                <h3>Submitted Information:</h3>
+                <p><strong>Name:</strong> <span id="popupName"></span></p>
+                <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="popupPhone"></span></p>
+                <p><strong>Message:</strong> <span id="popupMessage"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact me">
+        <h2>Contact Me</h2>
+        <p>Email : savitrisalsa@gmail.com</p>
+        <p>No.Hp : 085229923772</p>
+        <p>Alamat : Nawangsari, RT.16 RW.02, Kec.Weleri, Kab.Kendal, Jawa Tengah, Indonesia</p>
+    </section>
+
+    <footer>
+        <p>© 2025. Hak cipta dilindungi.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
